@@ -15,7 +15,7 @@ function ContactSection() {
         {/* SOL BLOK */}
         <div className="bg-white rounded-xl shadow-lg p-8 space-y-6">
           <img
-            src="/image/contact-hands.jpg"
+            src="/image/heysen.png"
             alt="contact"
             className="w-full rounded-lg object-cover"
           />
@@ -32,20 +32,22 @@ function ContactSection() {
             <p className="text-sm font-semibold text-gray-500 mb-2">TAKİP ET</p>
             <div className="flex gap-4">
               <a
-                href="#"
-                className="bg-gray-100 hover:bg-gray-200 p-3 rounded-lg shadow text-black"
+                href="https://www.instagram.com/2gocebe/"
+                className="bg-gray-100 hover:bg-pink-400 p-3 rounded-lg shadow text-black transition"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="bg-gray-100 hover:bg-gray-200 p-3 rounded-lg shadow text-black"
+                className="bg-gray-100 hover:bg-blue-400 p-3 rounded-lg shadow text-black transition"
               >
                 <Video className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="bg-gray-100 hover:bg-gray-200 p-3 rounded-lg shadow text-black"
+                className="bg-gray-100 hover:bg-red-500 p-3 rounded-lg shadow text-black transition"
               >
                 <Youtube className="w-5 h-5" />
               </a>

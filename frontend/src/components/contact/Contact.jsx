@@ -1,5 +1,7 @@
+import ContactSection from "../main/ContactSection";
+
 function Contact() {
-  return <div>Contact</div>;
+  return <ContactSection />;
 }
 
 export default Contact;

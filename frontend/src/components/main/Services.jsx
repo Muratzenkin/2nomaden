@@ -23,7 +23,7 @@ function Services() {
   ];
 
   return (
-    <section className="bg-gray-100 py-20 px-6">
+    <section className="bg-white py-20 px-6">
       <div className="max-w-7xl mx-auto text-center space-y-4">
         <h5 className="text-indigo-900 font-bold uppercase tracking-wide">
           2 Nomaden

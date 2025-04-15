@@ -1,96 +1,106 @@
 import { Link } from "react-router-dom";
+import { Instagram, Youtube } from "lucide-react";
 
-function MigrationFooter() {
+function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16">
-      <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-white py-16">
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+        {/* Hakkımızda */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Migration Support</h3>
-          <p>
-            Empowering migrants for a better future in Germany. Connecting
-            people with essential resources and support networks.
+          <h3 className="text-xl font-bold mb-4">2 NOMADEN</h3>
+          <p className="text-sm leading-relaxed text-gray-300">
+            Almanya’da yeni bir hayata başlayan göçmen bir çiftin hikayesi.
+            Bilgi, deneyim ve ilham dolu içerikler burada sizi bekliyor.
           </p>
         </div>
 
+        {/* Sayfalar */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Services</h3>
-          <ul className="space-y-2">
+          <h4 className="text-lg font-semibold mb-4">Sayfalar</h4>
+          <ul className="space-y-2 text-sm">
             <li>
-              <Link to="/legal-advice" className="hover:text-white">
-                Legal Advice
+              <Link to="/" className="hover:text-gray-200 transition">
+                Anasayfa
               </Link>
             </li>
             <li>
-              <Link to="/language-courses" className="hover:text-white">
-                Language Courses
+              <Link to="/blog" className="hover:text-gray-200 transition">
+                Blog
               </Link>
             </li>
             <li>
-              <Link to="/job-search" className="hover:text-white">
-                Job Search
+              <Link to="/about" className="hover:text-gray-200 transition">
+                Hakkımızda
               </Link>
             </li>
             <li>
-              <Link to="/housing" className="hover:text-white">
-                Housing Assistance
+              <Link to="/contact" className="hover:text-gray-200 transition">
+                İletişim
               </Link>
             </li>
           </ul>
         </div>
 
+        {/* Sosyal Medya */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">About Us</h3>
-          <ul className="space-y-2">
+          <h4 className="text-lg font-semibold mb-4">Sosyal Medya</h4>
+          <ul className="space-y-3 text-sm">
             <li>
-              <Link to="/our-mission" className="hover:text-white">
-                Our Mission
-              </Link>
+              <a
+                href="https://www.instagram.com/2gocebe/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 hover:text-pink-400"
+              >
+                <Instagram className="w-5 h-5" /> Instagram
+              </a>
             </li>
             <li>
-              <Link to="/team" className="hover:text-white">
-                Meet the Team
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:text-white">
-                Contact
-              </Link>
+              <a
+                href="#"
+                className="flex items-center gap-2 hover:text-red-400"
+              >
+                <Youtube className="w-5 h-5" /> YouTube (yakında)
+              </a>
             </li>
           </ul>
         </div>
 
+        {/* Yasal */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Legal</h3>
-          <ul className="space-y-2">
+          <h4 className="text-lg font-semibold mb-4">Yasal</h4>
+          <ul className="space-y-2 text-sm">
             <li>
-              <Link to="/privacy-policy" className="hover:text-white">
-                Privacy Policy
+              <Link
+                to="/privacy-policy"
+                className="hover:text-gray-200 transition"
+              >
+                Gizlilik Politikası
               </Link>
             </li>
             <li>
-              <Link to="/terms-of-service" className="hover:text-white">
-                Terms of Service
+              <Link
+                to="/terms-of-service"
+                className="hover:text-gray-200 transition"
+              >
+                Kullanım Koşulları
               </Link>
             </li>
             <li>
-              <Link to="/imprint" className="hover:text-white">
-                Imprint
+              <Link to="/imprint" className="hover:text-gray-200 transition">
+                İmpressum
               </Link>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="mt-12 text-center text-sm">
-        <p>
-          In case of emergencies, please contact the emergency hotline 112 or
-          visit telefonseelsorge.de for immediate support.
-        </p>
-        <hr className="my-6 border-gray-700" />
-        <p>&copy; 2024 Migration Support Germany. All rights reserved.</p>
+      <div className="mt-12 text-center text-xs text-gray-400">
+        <hr className="border-gray-700 mb-4" />
+        <p>&copy; 2024 2 NOMADEN. Tüm hakları saklıdır.</p>
       </div>
     </footer>
   );
 }
 
-export default MigrationFooter;
+export default Footer;

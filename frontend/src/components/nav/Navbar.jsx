@@ -12,7 +12,7 @@ function Navbar() {
   const navLinks = [
     { path: "/services", label: "HİZMETLERİMİZ" },
     { path: "/products", label: "ÜRÜNLERİMİZ" },
-    { path: "/about", label: "HAKKIMDA" },
+    { path: "/about", label: "HAKKIMIZDA" },
     { path: "/blog", label: "BLOG" },
   ];
 
@@ -21,16 +21,17 @@ function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navbarBg = isScrolled ? "bg-[#f1f5f9] shadow-md" : "bg-transparent";
-  const textColor = isScrolled ? "text-[#000d6b]" : "text-white";
+  const navbarBg = isScrolled
+    ? "bg-white shadow-md"
+    : "bg-brand-background/80 backdrop-blur-sm";
+  const textColor = isScrolled ? "text-brand-primary" : "text-brand-text";
   const buttonStyle = isScrolled
-    ? "bg-white text-[#000d6b] hover:bg-gray-100"
-    : "bg-white/20 text-white hover:bg-white/30";
+    ? "bg-brand-primary text-brand-text hover:bg-brand-primary/90"
+    : "bg-white/20 text-brand-text hover:bg-white/30 border border-white/30";
 
   return (
     <header
@@ -42,7 +43,7 @@ function Navbar() {
           to="/"
           className={`flex items-center gap-3 text-2xl font-extrabold font-serif ${textColor}`}
         >
-          <img src={Logo} alt="logo" className="w-12 h-12 rounded-full" />2
+          <img src={Logo} alt="logo" className="w-12 h-12 rounded-full" /> 2
           NOMADEN
         </NavLink>
 
@@ -51,7 +52,7 @@ function Navbar() {
           {navLinks.map((link) => (
             <NavLink key={link.path} to={link.path}>
               <li
-                className={`list-none hover:text-[#000d6b] transition ${textColor}`}
+                className={`list-none hover:text-brand-accent transition ${textColor}`}
               >
                 {link.label}
               </li>
@@ -61,8 +62,7 @@ function Navbar() {
 
         {/* Sağ taraf */}
         <div className="flex items-center gap-4">
-          {/* Buton */}
-          <NavLink to="/iletisim">
+          <NavLink to="/contact">
             <button
               className={`hidden sm:block px-4 py-2 rounded-lg text-sm font-semibold shadow-lg transition-all ${buttonStyle}`}
             >
@@ -70,7 +70,6 @@ function Navbar() {
             </button>
           </NavLink>
 
-          {/* Hamburger Menü */}
           <button
             onClick={toggleMenu}
             className={`md:hidden transition ${textColor}`}
@@ -80,16 +79,16 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobil Menü Paneli */}
+      {/* Mobil Menü */}
       {isOpen && (
         <div
           className={`md:hidden transition-all duration-300 ${
-            isScrolled ? "bg-[#f1f5f9]" : "bg-black/80"
+            isScrolled ? "bg-white" : "bg-brand-background/90"
           } px-6 pt-4 pb-6`}
         >
           <ul
             className={`flex flex-col gap-4 text-sm font-medium ${
-              isScrolled ? "text-gray-800" : "text-white"
+              isScrolled ? "text-brand-primary" : "text-white"
             }`}
           >
             {navLinks.map((link) => (
@@ -98,13 +97,13 @@ function Navbar() {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
               >
-                <li className="hover:text-[#000d6b] transition">
+                <li className="hover:text-brand-accent transition">
                   {link.label}
                 </li>
               </NavLink>
             ))}
-            <NavLink to="/iletisim" onClick={() => setIsOpen(false)}>
-              <li className="bg-white mt-4 shadow px-4 py-2 rounded-lg text-center text-[#000d6b]">
+            <NavLink to="/contact" onClick={() => setIsOpen(false)}>
+              <li className="mt-4 px-4 py-2 text-center rounded-lg bg-brand-primary text-white shadow hover:bg-brand-primary/90">
                 İletişime Geç
               </li>
             </NavLink>

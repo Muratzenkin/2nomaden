@@ -15,6 +15,15 @@ const config = {
           sm: "2rem",
         },
       },
+      colors: {
+        brand: {
+          primary: "#000d6b",
+          background: "#0b0b0b",
+          accent: "#7dd3fc",
+          highlight: "#ec4899",
+          text: "#f1f5f9",
+        },
+      },
     },
   },
   plugins: [],
