@@ -11,7 +11,6 @@ function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Scroll efekti
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -20,7 +19,6 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ✅ i18n ile dinamik navLink çevirisi
   const navLinks = useMemo(
     () => [
       { path: "/services", label: t("navbar.services") },
@@ -31,13 +29,14 @@ function Navbar() {
     [t]
   );
 
-  // Stiller
   const navbarBg = isScrolled
     ? "bg-white shadow-md dark:bg-brand-background"
     : "bg-brand-background/80 backdrop-blur-sm";
+
   const textColor = isScrolled
     ? "text-brand-primary dark:text-white"
     : "text-brand-text";
+
   const buttonStyle = isScrolled
     ? "bg-brand-primary text-brand-text hover:bg-brand-primary/90"
     : "bg-white/20 text-brand-text hover:bg-white/30 border border-white/30";
@@ -52,7 +51,7 @@ function Navbar() {
           to="/"
           className={`flex items-center gap-3 text-2xl font-extrabold font-serif ${textColor}`}
         >
-          <img src={Logo} alt="logo" className="w-12 h-12 rounded-full" />2
+          <img src={Logo} alt="logo" className="w-12 h-12 rounded-full" /> 2
           NOMADEN
         </NavLink>
 
@@ -71,7 +70,7 @@ function Navbar() {
 
         {/* Sağ taraf */}
         <div className="flex items-center gap-3">
-          {/* Dil seçici */}
+          {/* Masaüstü Dil Seçici */}
           <div className="hidden sm:flex gap-2 text-xs">
             <button
               onClick={() => i18n.changeLanguage("tr")}
@@ -87,7 +86,7 @@ function Navbar() {
             </button>
           </div>
 
-          {/* İletişim butonu */}
+          {/* Contact Butonu */}
           <NavLink to="/contact">
             <button
               className={`hidden sm:block px-4 py-2 rounded-lg text-xs font-bold shadow-lg uppercase transition-all ${buttonStyle}`}
@@ -96,7 +95,7 @@ function Navbar() {
             </button>
           </NavLink>
 
-          {/* Mobil Menü Aç/Kapat */}
+          {/* Mobil Menü Toggle */}
           <button
             onClick={toggleMenu}
             className={`md:hidden transition ${textColor}`}
@@ -131,11 +130,34 @@ function Navbar() {
                 </li>
               </NavLink>
             ))}
+
             <NavLink to="/contact" onClick={() => setIsOpen(false)}>
-              <li className="mt-4 px-4 py-2 text-center rounded-lg bg-brand-primary text-white shadow hover:bg-brand-primary/90">
+              <li className="mt-4 px-4 py-2 text-center rounded-lg bg-brand-primary text-black shadow hover:bg-brand-primary/90">
                 {t("navbar.contact")}
               </li>
             </NavLink>
+
+            {/* Mobil Dil Seçici */}
+            <div className="flex justify-center gap-4 mt-6">
+              <button
+                onClick={() => {
+                  i18n.changeLanguage("tr");
+                  setIsOpen(false);
+                }}
+                className="text-xs text-gray-300 hover:text-brand-accent transition"
+              >
+                🇹🇷
+              </button>
+              <button
+                onClick={() => {
+                  i18n.changeLanguage("de");
+                  setIsOpen(false);
+                }}
+                className="text-xs text-gray-300 hover:text-brand-accent transition"
+              >
+                🇩🇪
+              </button>
+            </div>
           </ul>
         </div>
       )}
