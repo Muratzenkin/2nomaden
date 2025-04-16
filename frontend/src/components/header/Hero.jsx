@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Hero() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <section className="relative min-h-[100vh] bg-gray-100 text-white px-6 py-28 flex items-center">
@@ -18,25 +20,20 @@ function Hero() {
         {/* Sağ: Yazı içeriği */}
         <div className="text-center md:text-left space-y-8">
           <h1 className="text-4xl sm:text-6xl font-extrabold drop-shadow-xl text-gray-400">
-            2 NOMADEN <span className="text-indigo-900">Wer sind wir?</span>
+            2 NOMADEN <span className="text-indigo-900">{t("hero.title")}</span>
           </h1>
           <p className="text-lg sm:text-xl drop-shadow-md leading-relaxed text-gray-800">
-            Wir sind ein Paar, das in Deutschland ein neues Leben beginnt und in
-            diesem Prozess das Gelernte mit anderen teilen möchte, um sie zu
-            inspirieren. Mit einem radikalen Wandel in unserem Leben in der
-            Türkei haben wir uns auf eine Reise nach Deutschland begeben, um
-            unsere Träume zu verwirklichen.
+            {t("hero.text1")}
           </p>
           <p className="text-lg sm:text-xl drop-shadow-md leading-relaxed text-gray-900">
-            Hier können Sie unsere Portfolios einsehen, um uns näher
-            kennenzulernen.
+            {t("hero.text2")}
           </p>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4">
             <button
               className="bg-brand-accent hover:bg-indigo-700 px-8 py-4 rounded-lg font-extrabold text-gray-800 shadow-lg transition duration-300 transform hover:scale-105"
               onClick={() => navigate("/haticenur")}
             >
-              Hatice Nur
+              Haticenur{" "}
             </button>
             <button
               className="bg-brand-accent hover:bg-indigo-700 px-8 py-4 rounded-lg font-extrabold text-gray-800 shadow-lg transition duration-300 transform hover:scale-105"

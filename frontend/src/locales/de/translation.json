@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "contact": "KONTAKT",
+    "services": "DIENSTLEISTUNGEN",
+    "products": "PRODUKTE",
+    "about": "ÜBER UNS",
+    "blog": "BLOG"
+  },
+  "header": {
+    "headerTitle": "2 NOMADEN",
+    "headerWelcome": "WILLKOMMEN BEI",
+    "headerText": "Wir teilen unsere Erfahrungen, um dich auf deinem Weg in Deutschland zu inspirieren. Hier bist du genau richtig, um mehr zu erfahren."
+  },
+  "hero": {
+    "title": "Wer sind wir?",
+    "text1": "Wir sind ein Paar, das in Deutschland ein neues Leben beginnt. Unsere Erfahrungen auf dieser Reise möchten wir mit anderen teilen, um sie zu inspirieren.",
+    "text2": "Hier können Sie unsere Portfolios einsehen, um uns näher kennenzulernen."
+  },
+
+  "footer": {
+    "aboutTitle": "2 NOMADEN",
+    "aboutText": "Die Geschichte eines migrantischen Paares, das ein neues Leben in Deutschland beginnt. Wissen, Erfahrung und Inspiration erwarten Sie hier.",
+    "pages": "Seiten",
+    "home": "Startseite",
+    "blog": "Blog",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "social": "Soziale Medien",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "impressum": "Impressum",
+    "copyright": "© 2024 2 NOMADEN. Alle Rechte vorbehalten."
+  }
+}

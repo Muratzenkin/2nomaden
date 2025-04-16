@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "contact": "İletişime Geç",
+    "services": "HİZMETLERİMİZ",
+    "products": "ÜRÜNLERİMİZ",
+    "about": "HAKKIMIZDA",
+    "blog": "BLOG"
+  },
+  "header": {
+    "headerTitle": "2 NOMADEN",
+    "headerWelcome": "HOŞGELDİNİZ",
+    "headerText": "Göç yolculuğumuzda edindiğimiz bilgi ve deneyimleri paylaşarak ilham veriyoruz. Almanya’da yaşam hakkında merak ettiklerin için doğru yerdesin."
+  },
+  "hero": {
+    "title": "Biz Kimiz?",
+    "text1": "Almanya’da yeni bir hayata başlayan bir çiftiz. Türkiye’deki radikal değişimimizle birlikte çıktığımız bu yolculukta öğrendiklerimizi başkalarına ilham olmak için paylaşıyoruz.",
+    "text2": "Portfolyolarımıza göz atarak bizi daha yakından tanıyabilirsiniz."
+  },
+
+  "footer": {
+    "aboutTitle": "2 NOMADEN",
+    "aboutText": "Almanya’da yeni bir hayata başlayan göçmen bir çiftin hikayesi. Bilgi, deneyim ve ilham dolu içerikler burada sizi bekliyor.",
+    "pages": "Sayfalar",
+    "home": "Anasayfa",
+    "blog": "Blog",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "social": "Sosyal Medya",
+    "legal": "Yasal",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "impressum": "İmpressum",
+    "copyright": "© 2024 2 NOMADEN. Tüm hakları saklıdır."
+  }
+}
