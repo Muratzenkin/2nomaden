@@ -31,5 +31,63 @@
     "terms": "Kullanım Koşulları",
     "impressum": "İmpressum",
     "copyright": "© 2024 2 NOMADEN. Tüm hakları saklıdır."
+  },
+
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Almanya’da yeni bir hayat kurarken sizi yalnız bırakmıyoruz. Size özel danışmanlık ve destek sunuyoruz.",
+    "list": [
+      {
+        "title": "Almanya’ya Uyum Danışmanlığı",
+        "description": "İlk adımlarda rehberlik, resmi işlemler, konaklama ve çalışma hayatına geçiş konularında destek."
+      },
+      {
+        "title": "Dil Öğrenme Yönlendirmesi",
+        "description": "Online ve yüz yüze Almanca kursları, dil sertifikaları hakkında bilgilendirme ve kaynak önerileri."
+      },
+      {
+        "title": "Topluluk Oluşturma ve Etkinlikler",
+        "description": "Göçmenler için sosyal çevre kurma, networking ve kültürel etkinliklere katılım imkanı sağlama."
+      }
+    ]
+  },
+  "about": {
+    "title": "Biz Kimiz?",
+    "intro": "Merhaba! Biz, Almanya’da yeni bir hayata adım atan, bu süreçte öğrendiklerimizi paylaşarak başkalarına da ilham vermeyi hedefleyen bir çiftiz...",
+    "section1": {
+      "title": "Neden Almanya?",
+      "text": "Aslında her şey yeni bir dil öğrenme serüveniyle başladı. Kovid dönemiyle birlikte Almanca öğrenmeye başladık ve zamanla Almanya hikayemiz oluştu..."
+    },
+    "section2": {
+      "title": "Yolculuğumuzun Dönüm Noktası",
+      "text": "Covid ile hayatın kısa olduğunu fark ettik. Hayallerin peşinden gitmenin önemini anladık. Yurt dışı bize konfor alanımızdan çıkmayı öğretti..."
+    },
+    "section3": {
+      "title": "Kimlere Hitap Ediyoruz?",
+      "text": "Sadece yeni gelenlere değil, uzun süredir Almanya’da olan ama hâlâ günlük zorluklarla uğraşan herkese hitap ediyoruz..."
+    },
+    "section4": {
+      "title": "Birlikte Yeni Bir Hayata…",
+      "text": "Bu süreçte öğrendiğimiz her bilgiyi paylaşarak bir rehber oluşturmayı hedefliyoruz. Almanya'da yaşamı kolaylaştırmak için buradayız."
+    }
+  },
+
+  "product": {
+    "title": "Danışmanlık Hizmetlerimiz",
+    "subtitle": "Saatlik birebir destek alarak Almanya’da hayatınızı kolaylaştırın.",
+    "starter": {
+      "title": "Başlangıç Paketi",
+      "description": "Almanya’ya yeni gelenler için temel bilgiler, resmi işler, kayıt süreçleri ve temel yönlendirmeler."
+    },
+    "pro": {
+      "title": "Pro Paket",
+      "description": "Denklik, iş bulma, CV düzenleme, iş başvurusu gibi özel danışmanlıklar."
+    },
+    "custom": {
+      "title": "Özel Paket",
+      "description": "İhtiyacınıza özel hazırlanmış destek planı. Talebinize göre şekillenir.",
+      "price": "Fiyat teklifiyle"
+    },
+    "button": "Bize Ulaşın"
   }
 }

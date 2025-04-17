@@ -31,5 +31,64 @@
     "terms": "Nutzungsbedingungen",
     "impressum": "Impressum",
     "copyright": "© 2024 2 NOMADEN. Alle Rechte vorbehalten."
+  },
+
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "subtitle": "Wir lassen Sie beim Aufbau eines neuen Lebens in Deutschland nicht allein. Wir bieten individuelle Beratung und Unterstützung.",
+    "list": [
+      {
+        "title": "Integrationsberatung in Deutschland",
+        "description": "Beratung zu ersten Schritten, offiziellen Verfahren, Unterkunft und Einstieg in das Berufsleben."
+      },
+      {
+        "title": "Sprachlernberatung",
+        "description": "Informationen zu Sprachkursen (online und vor Ort), Prüfungen und nützlichen Ressourcen."
+      },
+      {
+        "title": "Community-Aufbau & Events",
+        "description": "Unterstützung beim Knüpfen sozialer Kontakte und Teilnahme an kulturellen Veranstaltungen."
+      }
+    ]
+  },
+
+  "about": {
+    "title": "Wer sind wir?",
+    "intro": "Hallo! Wir sind ein Paar, das in Deutschland ein neues Leben begonnen hat. Dabei möchten wir unsere Erfahrungen teilen und anderen Mut machen. Mit einem radikalen Wandel in unserem Leben in der Türkei haben wir den Weg nach Deutschland eingeschlagen, um unsere Träume zu verwirklichen.",
+    "section1": {
+      "title": "Warum Deutschland?",
+      "text": "Alles begann mit dem Wunsch, eine neue Sprache zu lernen. Während der Covid-Zeit lernten wir Deutsch und entdeckten zunehmend mehr über die deutsche Kultur. Als wir erfuhren, dass es berufliche Chancen in Deutschland gibt, wurde es der nächste logische Schritt für uns."
+    },
+    "section2": {
+      "title": "Wendepunkt unserer Reise",
+      "text": "Die Pandemie hat uns gezeigt, wie kurz das Leben sein kann. Wir wollten unseren Träumen folgen. Deutschland zu verlassen hat uns nicht reich gemacht, aber es hat uns gelehrt, Lösungen zu finden und Herausforderungen zu meistern."
+    },
+    "section3": {
+      "title": "Wen sprechen wir an?",
+      "text": "Wir richten uns nicht nur an Neuankömmlinge, sondern auch an Menschen, die schon lange in Deutschland leben und im Alltag auf Herausforderungen stoßen. Wir wollen diesen Weg gemeinsam gehen."
+    },
+    "section4": {
+      "title": "Gemeinsam in ein neues Leben…",
+      "text": "Wir möchten all das, was wir gelernt haben, mit euch teilen und eine hilfreiche Orientierung bieten. Während wir unser Leben in Deutschland aufbauen, hoffen wir, auch dir eine Stütze zu sein."
+    }
+  },
+
+  "product": {
+    "title": "Unsere Beratungsangebote",
+    "subtitle": "Erhalten Sie stundenweise persönliche Unterstützung für ein einfacheres Leben in Deutschland.",
+    "starter": {
+      "title": "Einsteiger-Paket",
+      "description": "Basisinformationen für Neuankömmlinge, Behördengänge, Anmeldungen und mehr."
+    },
+    "pro": {
+      "title": "Profi-Paket",
+      "description": "Beratung zu Anerkennung, Jobsuche, Bewerbungshilfe, Lebenslaufoptimierung."
+    },
+    "custom": {
+      "title": "Individuelles Paket",
+      "description": "Ein auf Ihre Bedürfnisse zugeschnittener Beratungsplan.",
+      "price": "Preis auf Anfrage"
+    },
+    "button": "Kontaktieren Sie uns"
   }
 }
