@@ -25,21 +25,12 @@ function Hero() {
           <p className="text-lg sm:text-xl drop-shadow-md leading-relaxed text-gray-800">
             {t("hero.text1")}
           </p>
-          <p className="text-lg sm:text-xl drop-shadow-md leading-relaxed text-gray-900">
-            {t("hero.text2")}
-          </p>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4">
             <button
               className="bg-brand-accent hover:bg-indigo-700 px-8 py-4 rounded-lg font-extrabold text-gray-800 shadow-lg transition duration-300 transform hover:scale-105"
-              onClick={() => navigate("/haticenur")}
+              onClick={() => navigate("/about")}
             >
-              Haticenur{" "}
-            </button>
-            <button
-              className="bg-brand-accent hover:bg-indigo-700 px-8 py-4 rounded-lg font-extrabold text-gray-800 shadow-lg transition duration-300 transform hover:scale-105"
-              onClick={() => navigate("/murat")}
-            >
-              Murat
+              {t("hero.title")}
             </button>
           </div>
         </div>

@@ -89,7 +89,7 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/imprint" className="hover:text-gray-200 transition">
+              <Link to="/impressum" className="hover:text-gray-200 transition">
                 {t("footer.impressum")}
               </Link>
             </li>

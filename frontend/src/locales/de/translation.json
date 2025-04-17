@@ -13,8 +13,7 @@
   },
   "hero": {
     "title": "Wer sind wir?",
-    "text1": "Wir sind ein Paar, das in Deutschland ein neues Leben beginnt. Unsere Erfahrungen auf dieser Reise möchten wir mit anderen teilen, um sie zu inspirieren.",
-    "text2": "Hier können Sie unsere Portfolios einsehen, um uns näher kennenzulernen."
+    "text1": "Wir sind ein Paar, das in Deutschland ein neues Leben beginnt. Unsere Erfahrungen auf dieser Reise möchten wir mit anderen teilen, um sie zu inspirieren."
   },
 
   "footer": {
@@ -90,5 +89,86 @@
       "price": "Preis auf Anfrage"
     },
     "button": "Kontaktieren Sie uns"
+  },
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "intro": "Bei 2 NOMADEN legen wir großen Wert auf den Schutz Ihrer Daten. Diese Richtlinie erklärt, welche Daten wir sammeln und wie wir sie verwenden.",
+    "sections": {
+      "dataCollected": {
+        "title": "Gesammelte Daten",
+        "items": [
+          "Kontaktformularinformationen (Name, E-Mail, Nachricht)",
+          "Technische Daten über Cookies",
+          "Informationen bei der Buchung"
+        ]
+      },
+      "usage": {
+        "title": "Verwendung der Daten",
+        "items": [
+          "Bereitstellung und Verbesserung von Dienstleistungen",
+          "Kommunikation mit Nutzern",
+          "Statistische Analysen"
+        ]
+      },
+      "security": {
+        "title": "Datensicherheit",
+        "text": "Ihre Daten werden auf sicheren Servern gespeichert und nicht an Dritte weitergegeben."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "text": "Unsere Website verwendet Cookies, um die Benutzererfahrung zu verbessern."
+      },
+      "rights": {
+        "title": "Ihre Rechte",
+        "items": [
+          "Zugang zu Ihren Daten",
+          "Berichtigung oder Löschung beantragen",
+          "Widerspruch gegen die Verarbeitung",
+          "Datenübertragbarkeit"
+        ]
+      },
+      "contact": {
+        "title": "Kontakt",
+        "text": "Bei Fragen kontaktieren Sie uns bitte: 2gocebe@gmail.com"
+      }
+    }
+  },
+
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "intro": "Mit der Nutzung dieser Website akzeptieren Sie die folgenden Bedingungen.",
+    "content": [
+      {
+        "title": "1. Beschreibung des Dienstes",
+        "text": "Diese Website dient ausschließlich zu Informations- und Beratungszwecken. Es gibt keine rechtliche Gewährleistung."
+      },
+      {
+        "title": "2. Haftungsausschluss",
+        "text": "Die bereitgestellten Informationen können sich ändern. Benutzer handeln auf eigene Verantwortung."
+      },
+      {
+        "title": "3. Urheberrecht",
+        "text": "Alle Inhalte dieser Website gehören zu 2 NOMADEN. Eine Vervielfältigung oder Weitergabe ist ohne Erlaubnis nicht gestattet."
+      }
+    ]
+  },
+  "impressum": {
+    "title": "Impressum",
+    "name": "2 NOMADEN",
+    "address": "Düsseldorf, Deutschland",
+    "email": "2gocebe@gmail.com",
+    "responsible": "Verantwortlich: Hatice Nur & Murat",
+    "disclaimer": "Keine Haftung für Inhalte. Für externe Links sind ausschließlich deren Betreiber verantwortlich.",
+    "legalNotice": "Diese Website wird gemäß den gesetzlichen Bestimmungen der Bundesrepublik Deutschland betrieben. Weitere Informationen zur Online-Streitbeilegung finden Sie hier:",
+    "platform": "https://ec.europa.eu/consumers/odr",
+    "platformLabel": "EU-Plattform zur Online-Streitbeilegung",
+    "businessType": "Unternehmensart: Einzelunternehmen",
+    "lastUpdated": "Letzte Aktualisierung: {{date}}"
+  },
+
+  "approach": {
+    "subtitle": "Unser Ansatz",
+    "title": "Jeder verdient die besten Chancen für einen Neuanfang in Deutschland.",
+    "text": "Wir setzen uns dafür ein, Migrant:innen zu unterstützen, um neue Perspektiven und Möglichkeiten zu schaffen. Durch Bildungsinitiativen und Beratungsdienste fördern wir eine erfolgreiche Integration und stärken die Gemeinschaft."
   }
 }

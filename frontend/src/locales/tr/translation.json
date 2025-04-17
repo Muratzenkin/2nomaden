@@ -13,8 +13,7 @@
   },
   "hero": {
     "title": "Biz Kimiz?",
-    "text1": "Almanya’da yeni bir hayata başlayan bir çiftiz. Türkiye’deki radikal değişimimizle birlikte çıktığımız bu yolculukta öğrendiklerimizi başkalarına ilham olmak için paylaşıyoruz.",
-    "text2": "Portfolyolarımıza göz atarak bizi daha yakından tanıyabilirsiniz."
+    "text1": "Almanya’da yeni bir hayata başlayan bir çiftiz. Türkiye’deki radikal değişimimizle birlikte çıktığımız bu yolculukta öğrendiklerimizi başkalarına ilham olmak için paylaşıyoruz."
   },
 
   "footer": {
@@ -89,5 +88,85 @@
       "price": "Fiyat teklifiyle"
     },
     "button": "Bize Ulaşın"
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "intro": "2 NOMADEN olarak, kullanıcılarımızın gizliliğini önemsiyoruz. Bu politika, hangi verileri topladığımızı ve nasıl kullandığımızı açıklar.",
+    "sections": {
+      "dataCollected": {
+        "title": "Toplanan Veriler",
+        "items": [
+          "İletişim formu bilgileri (ad, e-posta, mesaj)",
+          "Çerezler aracılığıyla toplanan teknik bilgiler",
+          "Rezervasyon sırasında sağlanan bilgiler"
+        ]
+      },
+      "usage": {
+        "title": "Veri Kullanımı",
+        "items": [
+          "Hizmet sağlamak ve geliştirmek",
+          "Kullanıcılarla iletişim kurmak",
+          "İstatistiksel analiz yapmak"
+        ]
+      },
+      "security": {
+        "title": "Veri Güvenliği",
+        "text": "Verileriniz güvenli sunucularda saklanır ve üçüncü kişilerle paylaşılmaz."
+      },
+      "cookies": {
+        "title": "Çerezler",
+        "text": "Web sitemiz kullanıcı deneyimini geliştirmek için çerezler kullanır."
+      },
+      "rights": {
+        "title": "Haklarınız",
+        "items": [
+          "Verilerinize erişim hakkı",
+          "Düzeltme veya silme talep etme",
+          "İşlemeye itiraz etme",
+          "Veri taşınabilirliği"
+        ]
+      },
+      "contact": {
+        "title": "İletişim",
+        "text": "Sorularınız için bizimle iletişime geçin: 2gocebe@gmail.com"
+      }
+    }
+  },
+
+  "terms": {
+    "title": "Kullanım Koşulları",
+    "intro": "Bu web sitesini kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız.",
+    "content": [
+      {
+        "title": "1. Hizmet Tanımı",
+        "text": "Bu site, bilgi paylaşımı ve rehberlik amacıyla kurulmuştur. Herhangi bir yasal garanti vermez."
+      },
+      {
+        "title": "2. Sorumluluk Reddi",
+        "text": "Sunulan bilgiler zamanla değişebilir. Kullanıcılar bilgileri kendi sorumluluklarıyla kullanır."
+      },
+      {
+        "title": "3. Telif Hakları",
+        "text": "Bu sitedeki tüm içerikler 2 NOMADEN’e aittir. İzinsiz kopyalanamaz ya da paylaşılamaz."
+      }
+    ]
+  },
+  "impressum": {
+    "title": "İmpressum",
+    "name": "2 NOMADEN",
+    "address": "Düsseldorf, Almanya",
+    "email": "2gocebe@gmail.com",
+    "responsible": "Sorumlu Kişi: Hatice Nur & Murat",
+    "disclaimer": "İçeriklerden doğabilecek sorumluluk kabul edilmez. Harici bağlantıların içeriğinden ilgili sahipleri sorumludur.",
+    "legalNotice": "Bu web sitesi, Almanya'daki yasal düzenlemelere uygun olarak yönetilmektedir. Avrupa Birliği'nin çevrimiçi anlaşmazlık çözüm platformu hakkında daha fazla bilgi almak için şu adrese göz atabilirsiniz:",
+    "platform": "https://ec.europa.eu/consumers/odr",
+    "platformLabel": "AB Uyuşmazlık Çözüm Platformu",
+    "businessType": "İşletme Türü: Bireysel Girişim",
+    "lastUpdated": "Son güncelleme tarihi: {{date}}"
+  },
+  "approach": {
+    "subtitle": "Yaklaşımımız",
+    "title": "Herkes Almanya’da yeni bir başlangıç için en iyi şansı hak eder.",
+    "text": "Göçmenlere yeni perspektifler ve fırsatlar sunmak için eğitim ve danışmanlık hizmetleriyle destek veriyoruz. Başarılı bir entegrasyonu teşvik ederek topluluğu güçlendiriyoruz."
   }
 }

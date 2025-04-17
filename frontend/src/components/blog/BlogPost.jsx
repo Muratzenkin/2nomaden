@@ -1,30 +1,35 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { blogPosts } from "./data";
 
-const BlogPost = () => {
+function BlogPost() {
   const { id } = useParams();
-  const [post, setPost] = useState();
+  const post = blogPosts.find((p) => p.id === id);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/posts")
-      .then((response) => setPost(response.data))
-      .catch((error) => console.error("Error fetching Posts: ", error));
-  }, [id]);
+  if (!post)
+    return <p className="text-center py-20 text-red-500">Yazı bulunamadı.</p>;
 
   return (
-    <div>
-      {post ? (
-        <>
-          <h2>{post.title}</h2>
-          <p>{post.content}</p>
-        </>
-      ) : (
-        <p>Text laden...</p>
-      )}
-    </div>
+    <article className="max-w-3xl mx-auto px-6 py-16">
+      <img
+        src={post.coverImage}
+        alt={post.title}
+        className="w-full h-80 object-cover rounded-xl mb-6"
+      />
+      <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+      <p className="text-sm text-gray-500 mb-6">
+        {new Date(post.date).toLocaleDateString()}
+      </p>
+      <div className="text-gray-800 leading-relaxed whitespace-pre-line">
+        {post.content}
+      </div>
+      <Link
+        to="/blog"
+        className="text-brand-accent hover:underline block mt-10"
+      >
+        ← Tüm yazılara dön
+      </Link>
+    </article>
   );
-};
+}
 
 export default BlogPost;

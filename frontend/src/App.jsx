@@ -7,6 +7,9 @@ import MigrationFooter from "./components/footer/Footer.jsx";
 import Header from "./components/header/Header.jsx";
 import Services from "./components/dienst/Services.jsx";
 import Product from "./components/product/Product.jsx";
+import PrivacyPolicy from "./components/footer/PrivacyPolicy.jsx";
+import Impressum from "./components/footer/Impressum.jsx";
+import TermsOfService from "./components/footer/TermsOfService.jsx";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
       </Routes>
       <MigrationFooter />
     </>
