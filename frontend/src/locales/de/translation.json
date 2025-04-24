@@ -170,5 +170,42 @@
     "subtitle": "Unser Ansatz",
     "title": "Jeder verdient die besten Chancen für einen Neuanfang in Deutschland.",
     "text": "Wir setzen uns dafür ein, Migrant:innen zu unterstützen, um neue Perspektiven und Möglichkeiten zu schaffen. Durch Bildungsinitiativen und Beratungsdienste fördern wir eine erfolgreiche Integration und stärken die Gemeinschaft."
+  },
+
+  "contact": {
+    "always_available": "Immer erreichbar",
+    "title": "Kontakt aufnehmen",
+    "hey_you": "Hallo, schön dass du da bist!",
+    "description": "Du kannst uns jederzeit erreichen. Folge uns auf unseren Social Media Kanälen, um immer auf dem Laufenden zu bleiben.",
+    "follow_us": "Folge uns"
+  },
+  "contact_form": {
+    "title": "Kontaktformular",
+    "name": "Ihr Name",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "message": "Ihre Nachricht",
+    "send": "Absenden",
+    "success": "Ihre Nachricht wurde erfolgreich gesendet!",
+    "error": "Nachricht konnte nicht gesendet werden.",
+    "server_error": "Ein Serverfehler ist aufgetreten."
+  },
+  "achievements": {
+    "subtitle": "Mit jeder Erfahrung wachsen wir weiter",
+    "title": "Unsere Stärken",
+    "expertise": "Fachwissen im Migrationsbereich",
+    "trust": "Vertrauenswürdige & transparente Prozesse",
+    "availability": "24/7 Erreichbarkeit",
+    "results": "Konkrete und schnelle Lösungen"
+  },
+  "services2": {
+    "brand": "2 Nomaden",
+    "title": "Unsere Dienstleistungen",
+    "consulting_title": "Individuelle Migrationsberatung",
+    "consulting_desc": "Wir beantworten all Ihre Fragen rund um Visum, Aufenthalt, Anerkennung und Jobsuche in persönlichen Beratungsgesprächen.",
+    "recognition_title": "Beratung zur Berufsanerkennung",
+    "recognition_desc": "Wir begleiten den gesamten Anerkennungsprozess und bieten Unterstützung bei allen nötigen Dokumenten und Verfahren.",
+    "study_title": "Beratung zum Studium & Visum",
+    "study_desc": "Wir unterstützen Sie bei jedem Schritt des Bewerbungsprozesses für ein Studium oder Sprachkurs in Deutschland."
   }
 }

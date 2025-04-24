@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function ContactForm() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,23 +35,23 @@ function ContactForm() {
         setSuccess(true);
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        alert("❌ Mesaj gönderilemedi.");
+        alert(t("contact_form.error"));
       }
     } catch (err) {
       console.error("HATA:", err);
-      alert("Sunucu hatası oluştu.");
+      alert(t("contact_form.server_error"));
     }
   };
 
   return (
     <div className="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-3xl font-bold mb-4">İletişim</h2>
+      <h2 className="text-3xl font-bold mb-4">{t("contact_form.title")}</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="Adınız"
+          placeholder={t("contact_form.name")}
           required
           className="w-full p-3 border rounded"
         />
@@ -56,7 +59,7 @@ function ContactForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Email"
+          placeholder={t("contact_form.email")}
           required
           className="w-full p-3 border rounded"
         />
@@ -64,7 +67,7 @@ function ContactForm() {
           name="subject"
           value={formData.subject}
           onChange={handleChange}
-          placeholder="Konu"
+          placeholder={t("contact_form.subject")}
           required
           className="w-full p-3 border rounded"
         />
@@ -72,7 +75,7 @@ function ContactForm() {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          placeholder="Mesajınız"
+          placeholder={t("contact_form.message")}
           rows="5"
           required
           className="w-full p-3 border rounded"
@@ -81,11 +84,11 @@ function ContactForm() {
           type="submit"
           className="w-full bg-indigo-600 text-white py-3 rounded font-bold hover:bg-indigo-700"
         >
-          Gönder
+          {t("contact_form.send")}
         </button>
         {success && (
           <p className="text-green-600 font-semibold pt-2">
-            ✅ Mesajınız başarıyla gönderildi!
+            {t("contact_form.success")}
           </p>
         )}
       </form>

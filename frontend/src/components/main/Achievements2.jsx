@@ -1,19 +1,22 @@
+import { useTranslation } from "react-i18next";
+
 function Achievements() {
+  const { t } = useTranslation();
   const items = [
-    "Eğitim",
-    "Profesyonel Danışmanlık",
-    "7/24 Destek",
-    "Kesin Çözümler",
+    t("achievements.expertise"),
+    t("achievements.trust"),
+    t("achievements.availability"),
+    t("achievements.results"),
   ];
 
   return (
     <section className="bg-gray-100 py-20 px-6">
       <div className="max-w-6xl mx-auto text-center space-y-4">
         <p className="text-indigo-800 uppercase tracking-widest text-sm font-semibold">
-          yolda ögrendiklerimiz ile beraber gelisiyoruz
+          {t("achievements.subtitle")}
         </p>
         <h2 className="text-4xl sm:text-5xl font-bold text-gray-800">
-          Kazanımlar
+          {t("achievements.title")}
         </h2>
 
         {/* Kazanım kutuları */}

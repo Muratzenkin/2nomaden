@@ -8,7 +8,7 @@ function Hero() {
   return (
     <section className="relative min-h-[100vh] bg-gray-100 text-white px-6 py-28 flex items-center">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-16">
-        {/* Sol: Görsel */}
+        {/* Linke Seite Bild  */}
         <div className="flex justify-center">
           <img
             src="/image/insta-profile.png"
@@ -17,7 +17,7 @@ function Hero() {
           />
         </div>
 
-        {/* Sağ: Yazı içeriği */}
+        {/* Rechte Seite Text */}
         <div className="text-center md:text-left space-y-8">
           <h1 className="text-4xl sm:text-6xl font-extrabold drop-shadow-xl text-gray-400">
             2 NOMADEN <span className="text-indigo-900">{t("hero.title")}</span>

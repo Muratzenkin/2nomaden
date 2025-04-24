@@ -1,24 +1,24 @@
 import { Monitor, Zap, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 function Services() {
+  const { t } = useTranslation();
+
   const services = [
     {
       icon: <Monitor className="w-10 h-10 text-indigo-800" />,
-      title: "Online Görüşmeler ile Birebir Danışmanlık",
-      description:
-        "Denklik, öğrenci vizesi ve Almanya’ya göç yolları hakkında birebir online görüşmeler yaparak tüm sorularınızı yanıtlıyor, aklınızdaki soru işaretlerini gideriyoruz.",
+      title: t("services2.consulting_title"),
+      description: t("services2.consulting_desc"),
     },
     {
       icon: <Zap className="w-10 h-10 text-indigo-800" />,
-      title: "Mesleki Denklik ve Süreç Yönetimi",
-      description:
-        "Almanya’da mesleki denklik almak isteyenler için mentorluk hizmeti ve tam kapsamlı süreç yönetimi sunuyoruz. Gerekli belgeler, başvuru süreci ve resmi prosedürler konusunda profesyonel destek sağlıyoruz.",
+      title: t("services2.recognition_title"),
+      description: t("services2.recognition_desc"),
     },
     {
       icon: <Globe className="w-10 h-10 text-indigo-800" />,
-      title: "Öğrenci Vizesi Danışmanlığı",
-      description:
-        "Almanya’da üniversite veya yüksek lisans eğitimi almak isteyenler için tam kapsamlı öğrenci vizesi danışmanlığı sunuyoruz. Başvuru sürecinden kabul belgelerine kadar tüm adımlarda rehberlik ediyoruz.",
+      title: t("services2.study_title"),
+      description: t("services2.study_desc"),
     },
   ];
 
@@ -26,10 +26,10 @@ function Services() {
     <section className="bg-white py-20 px-6">
       <div className="max-w-7xl mx-auto text-center space-y-4">
         <h5 className="text-indigo-900 font-bold uppercase tracking-wide">
-          2 Nomaden
+          {t("services2.brand")}
         </h5>
         <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-800">
-          Neler Yapıyoruz
+          {t("services2.title")}
         </h2>
       </div>
 

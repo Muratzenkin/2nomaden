@@ -168,5 +168,41 @@
     "subtitle": "Yaklaşımımız",
     "title": "Herkes Almanya’da yeni bir başlangıç için en iyi şansı hak eder.",
     "text": "Göçmenlere yeni perspektifler ve fırsatlar sunmak için eğitim ve danışmanlık hizmetleriyle destek veriyoruz. Başarılı bir entegrasyonu teşvik ederek topluluğu güçlendiriyoruz."
+  },
+  "contact": {
+    "always_available": "7/24 ulaşılabilir",
+    "title": "İletişime Geçin",
+    "hey_you": "Merhaba! Seni gördüğümüze sevindik.",
+    "description": "Bize her zaman ulaşabilirsiniz. Güncel içerikler için sosyal medya hesaplarımızı takip edin.",
+    "follow_us": "Bizi takip et"
+  },
+  "contact_form": {
+    "title": "İletişim",
+    "name": "Adınız",
+    "email": "Email",
+    "subject": "Konu",
+    "message": "Mesajınız",
+    "send": "Gönder",
+    "success": "Mesajınız başarıyla gönderildi!",
+    "error": "Mesaj gönderilemedi.",
+    "server_error": "Sunucu hatası oluştu."
+  },
+  "achievements": {
+    "subtitle": "Her danışanla birlikte biz de gelişiyoruz",
+    "title": "Güçlü Yönlerimiz",
+    "expertise": "Göçmenlik Alanında Uzmanlık",
+    "trust": "Güvenilir ve Şeffaf Süreçler",
+    "availability": "7/24 Erişilebilir Danışmanlık",
+    "results": "Somut ve Hızlı Çözümler"
+  },
+  "services2": {
+    "brand": "2 Nomaden",
+    "title": "Hizmetlerimiz",
+    "consulting_title": "Birebir Göçmenlik Danışmanlığı",
+    "consulting_desc": "Vize, oturum, denklik ve iş arama süreçlerine dair tüm sorularınızı birebir görüşmelerle yanıtlıyoruz. Size özel rehberlik sunuyoruz.",
+    "recognition_title": "Mesleki Denklik Başvuruları",
+    "recognition_desc": "Almanya’da çalışmak isteyenler için denklik süreçlerini adım adım yönetiyoruz. Belgeler, başvuru ve resmi aşamalar konusunda destek sağlıyoruz.",
+    "study_title": "Eğitim & Öğrenci Vizesi Danışmanlığı",
+    "study_desc": "Üniversite, yüksek lisans veya dil eğitimi almak isteyenler için tüm başvuru sürecinde danışmanlık sunuyoruz."
   }
 }
