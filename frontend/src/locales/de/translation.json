@@ -207,5 +207,11 @@
     "recognition_desc": "Wir begleiten den gesamten Anerkennungsprozess und bieten Unterstützung bei allen nötigen Dokumenten und Verfahren.",
     "study_title": "Beratung zum Studium & Visum",
     "study_desc": "Wir unterstützen Sie bei jedem Schritt des Bewerbungsprozesses für ein Studium oder Sprachkurs in Deutschland."
-  }
+  },
+
+  "blog.loading": "Wird geladen...",
+  "blog.blogPageTitle": "Blog",
+  "blog.readMore": "Mehr lesen",
+  "blog.latestPosts": "Neueste Beiträge",
+  "blog.categories": "Kategorien"
 }

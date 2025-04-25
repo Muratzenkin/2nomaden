@@ -204,5 +204,11 @@
     "recognition_desc": "Almanya’da çalışmak isteyenler için denklik süreçlerini adım adım yönetiyoruz. Belgeler, başvuru ve resmi aşamalar konusunda destek sağlıyoruz.",
     "study_title": "Eğitim & Öğrenci Vizesi Danışmanlığı",
     "study_desc": "Üniversite, yüksek lisans veya dil eğitimi almak isteyenler için tüm başvuru sürecinde danışmanlık sunuyoruz."
-  }
+  },
+
+  "blog.loading": "Yükleniyor...",
+  "blog.blogPageTitle": "Blog",
+  "blog.readMore": "Devamını oku",
+  "blog.latestPosts": "En Son Yayınlananlar",
+  "blog.categories": "Kategoriler"
 }

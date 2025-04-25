@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import BlogList from "./Bloglist";
-import BlogPost from "./BlogPost";
+import Bloglist from "./Bloglist";
 import { Helmet } from "react-helmet-async";
+import BlogDetail from "./BlogDetail";
 
 function Blog() {
   return (
@@ -10,8 +10,8 @@ function Blog() {
         <title>Blog | 2 Nomaden</title>
       </Helmet>
       <Routes>
-        <Route path="/" element={<BlogList />} />
-        <Route path="/post/:id" element={<BlogPost />} />
+        <Route path="/" element={<Bloglist />} />
+        <Route path="/post/:slug" element={<BlogDetail />} />
       </Routes>
     </div>
   );

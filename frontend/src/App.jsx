@@ -10,6 +10,7 @@ import Product from "./components/product/Product.jsx";
 import PrivacyPolicy from "./components/footer/PrivacyPolicy.jsx";
 import Impressum from "./components/footer/Impressum.jsx";
 import TermsOfService from "./components/footer/TermsOfService.jsx";
+import Admin from "./pages/Admin.jsx";
 
 function App() {
   return (
@@ -21,11 +22,12 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/products" element={<Product />} />
         <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/*" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       <MigrationFooter />
     </>
