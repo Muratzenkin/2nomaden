@@ -240,7 +240,9 @@
       "edit": "Bearbeiten",
       "delete": "Löschen",
       "save": "Speichern",
-      "logout": "Abmelden"
+      "logout": "Abmelden",
+      "update": "Aktualisieren",
+      "cancel": "Abbrechen"
     },
     "msg": {
       "fail": "Aktion fehlgeschlagen.",

@@ -237,7 +237,9 @@
       "edit": "Düzenle",
       "delete": "Sil",
       "save": "Kaydet",
-      "logout": "Çıkış Yap"
+      "logout": "Çıkış Yap",
+      "update": "Güncelle",
+      "cancel": "İptal"
     },
     "msg": {
       "fail": "İşlem başarısız.",
