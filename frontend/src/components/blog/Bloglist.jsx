@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react"; // Çarpı ikonu için ekledik
+import API_BASE from "../../config.js";
 
 function BlogList() {
   const [blogs, setBlogs] = useState([]);
@@ -10,7 +11,7 @@ function BlogList() {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/blogs")
+    fetch(`${API_BASE}/api/blogs`)
       .then((res) => res.json())
       .then((data) => {
         setBlogs(data);

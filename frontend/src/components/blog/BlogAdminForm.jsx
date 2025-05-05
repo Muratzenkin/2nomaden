@@ -1,4 +1,5 @@
 import { useState } from "react";
+import API_BASE from "../../config.js";
 
 function BlogAdminForm() {
   const [formData, setFormData] = useState({
@@ -38,7 +39,7 @@ function BlogAdminForm() {
       author: formData.author,
     };
 
-    const res = await fetch("https://twonomaden.onrender.com/api/blogs", {
+    const res = await fetch(`${API_BASE}/api/blogs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

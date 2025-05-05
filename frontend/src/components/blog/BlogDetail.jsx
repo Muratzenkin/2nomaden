@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import API_BASE from "../../config.js";
 
 function BlogDetail() {
   const { slug } = useParams();
@@ -8,7 +9,7 @@ function BlogDetail() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/blogs/${slug}`)
+    fetch(`${API_BASE}/api/blogs/${slug}`)
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [slug]);
