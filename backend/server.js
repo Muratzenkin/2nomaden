@@ -13,7 +13,10 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173", // geliştirme ortamı
+      "https://2nomaden.netlify.app", // canlı Netlify frontend
+    ],
     credentials: true,
   })
 );
