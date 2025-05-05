@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import nodemailer from "nodemailer";
 import blogRoutes from "./src/routes/blogRoutes.js";
 import dbConnection from "./src/scripts/dbConnection.js";
+import contactRoutes from "./src/routes/contactRoutes.js";
 
 // Env değişkenlerini oku
 dotenv.config();
@@ -26,6 +27,7 @@ dbConnection();
 
 //Routes
 app.use("/api/blogs", blogRoutes);
+app.use("/api/contact", contactRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
