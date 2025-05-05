@@ -213,5 +213,49 @@
   "blog.blogPageTitle": "Blog",
   "blog.readMore": "Mehr lesen",
   "blog.latestPosts": "Neueste Beiträge",
-  "blog.categories": "Kategorien"
+  "blog.categories": "Kategorien",
+  "blog.add": "📝 Neue Blog hinzufügen",
+  "admin": {
+    "title_new": "Neuen Blogbeitrag erstellen",
+    "title_edit": "Blogbeitrag bearbeiten",
+    "save": "Speichern",
+    "update": "Aktualisieren",
+    "cancel": "Abbrechen",
+    "logout": "Abmelden",
+    "success": "Aktion erfolgreich abgeschlossen.",
+    "list_title": "Blogliste",
+    "confirm_delete": "Möchtest du diesen Blogbeitrag wirklich löschen?",
+    "delete_fail": "Löschen fehlgeschlagen.",
+    "form": {
+      "slug": "Slug (z. B. anerkennung-in-deutschland)",
+      "title_tr": "Titel (TR)",
+      "title_de": "Titel (DE)",
+      "content_tr": "Inhalt (TR)",
+      "content_de": "Inhalt (DE)",
+      "image": "Bild-URL",
+      "category": "Kategorie",
+      "author": "Autor"
+    },
+    "button": {
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "save": "Speichern",
+      "logout": "Abmelden"
+    },
+    "msg": {
+      "fail": "Aktion fehlgeschlagen.",
+      "success": "Aktion erfolgreich abgeschlossen.",
+      "confirm_delete": "Möchtest du diesen Blogbeitrag wirklich löschen?",
+      "delete_fail": "Löschen fehlgeschlagen."
+    },
+    "login": {
+      "title": "Admin-Anmeldung",
+      "note": "Nur Admins können Blogs hinzufügen!",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "button": "Einloggen",
+      "fail": "Anmeldung fehlgeschlagen.",
+      "server_error": "Serverfehler."
+    }
+  }
 }

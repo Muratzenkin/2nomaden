@@ -210,5 +210,49 @@
   "blog.blogPageTitle": "Blog",
   "blog.readMore": "Devamını oku",
   "blog.latestPosts": "En Son Yayınlananlar",
-  "blog.categories": "Kategoriler"
+  "blog.categories": "Kategoriler",
+  "blog.add": "📝 Yeni Blog Ekle",
+  "admin": {
+    "title_new": "Yeni Blog Yazısı Ekle",
+    "title_edit": "Blog Güncelle",
+    "save": "Kaydet",
+    "update": "Güncelle",
+    "cancel": "İptal",
+    "logout": "Çıkış Yap",
+    "success": "İşlem başarıyla tamamlandı.",
+    "list_title": "Blog Listesi",
+    "confirm_delete": "Bu blog yazısı silinsin mi?",
+    "delete_fail": "Silme işlemi başarısız.",
+    "form": {
+      "slug": "slug (örnek: almanyada-denklik)",
+      "title_tr": "Başlık (TR)",
+      "title_de": "Başlık (DE)",
+      "content_tr": "İçerik (TR)",
+      "content_de": "İçerik (DE)",
+      "image": "Kapak görseli URL'si",
+      "category": "Kategori",
+      "author": "Yazar"
+    },
+    "button": {
+      "edit": "Düzenle",
+      "delete": "Sil",
+      "save": "Kaydet",
+      "logout": "Çıkış Yap"
+    },
+    "msg": {
+      "fail": "İşlem başarısız.",
+      "success": "İşlem başarıyla tamamlandı.",
+      "confirm_delete": "Bu blog yazısı silinsin mi?",
+      "delete_fail": "Silme işlemi başarısız."
+    },
+    "login": {
+      "title": "Admin Girişi",
+      "note": "Sadece adminler blog ekleyebilir!",
+      "email": "E-posta",
+      "password": "Şifre",
+      "button": "Giriş Yap",
+      "fail": "Giriş başarısız.",
+      "server_error": "Sunucu hatası."
+    }
+  }
 }

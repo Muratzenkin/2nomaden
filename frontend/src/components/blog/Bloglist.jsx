@@ -144,13 +144,13 @@ function BlogList() {
           </div>
         </aside>
       </div>
-      {/* Yeni Blog Ekle Butonu (sayfanın altında, login yönlendirmeli) */}
+      {/* Yeni Blog Ekle Butonu */}
       <div className="mt-16 text-center">
         <Link
           to="/login"
           className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full text-lg hover:bg-indigo-700 transition"
         >
-          📝 Yeni Blog Ekle
+          {t("blog.add")}
         </Link>
       </div>
     </div>

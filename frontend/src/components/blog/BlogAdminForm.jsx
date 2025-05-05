@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import API_BASE from "../../config.js";
+
 const token = localStorage.getItem("token");
 
 function BlogAdminForm() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     slug: "",
     title_tr: "",
@@ -72,7 +76,7 @@ function BlogAdminForm() {
       fetchBlogs();
       resetForm();
     } else {
-      alert("İşlem başarısız.");
+      alert(t("admin.msg.fail"));
     }
   };
 
@@ -91,7 +95,7 @@ function BlogAdminForm() {
   };
 
   const handleDelete = async (slug) => {
-    if (window.confirm("Bu blog yazısı silinsin mi?")) {
+    if (window.confirm(t("admin.msg.confirm_delete"))) {
       const res = await fetch(`${API_BASE}/api/blogs/${slug}`, {
         method: "DELETE",
         headers: {
@@ -101,7 +105,7 @@ function BlogAdminForm() {
       if (res.ok) {
         fetchBlogs();
       } else {
-        alert("Silme işlemi başarısız.");
+        alert(t("admin.msg.delete_fail"));
       }
     }
   };
@@ -129,7 +133,7 @@ function BlogAdminForm() {
   return (
     <div className="max-w-5xl mx-auto py-10 px-4 space-y-10">
       <h1 className="text-3xl font-bold">
-        {editMode ? "Blog Güncelle" : "Yeni Blog Yazısı Ekle"}
+        {editMode ? t("admin.title_edit") : t("admin.title_new")}
       </h1>
 
       <form onSubmit={handleSubmit} className="grid gap-4">
@@ -137,7 +141,7 @@ function BlogAdminForm() {
           name="slug"
           value={formData.slug}
           onChange={handleChange}
-          placeholder="slug (örnek: almanyada-denklik)"
+          placeholder={t("admin.form.slug")}
           required
           disabled={editMode}
           className="w-full p-3 border rounded"
@@ -146,7 +150,7 @@ function BlogAdminForm() {
           name="title_tr"
           value={formData.title_tr}
           onChange={handleChange}
-          placeholder="Başlık (TR)"
+          placeholder={t("admin.form.title_tr")}
           required
           className="w-full p-3 border rounded"
         />
@@ -154,7 +158,7 @@ function BlogAdminForm() {
           name="title_de"
           value={formData.title_de}
           onChange={handleChange}
-          placeholder="Başlık (DE)"
+          placeholder={t("admin.form.title_de")}
           required
           className="w-full p-3 border rounded"
         />
@@ -162,7 +166,7 @@ function BlogAdminForm() {
           name="content_tr"
           value={formData.content_tr}
           onChange={handleChange}
-          placeholder="İçerik (TR)"
+          placeholder={t("admin.form.content_tr")}
           required
           className="w-full p-3 border rounded"
           rows="5"
@@ -171,7 +175,7 @@ function BlogAdminForm() {
           name="content_de"
           value={formData.content_de}
           onChange={handleChange}
-          placeholder="İçerik (DE)"
+          placeholder={t("admin.form.content_de")}
           required
           className="w-full p-3 border rounded"
           rows="5"
@@ -180,21 +184,21 @@ function BlogAdminForm() {
           name="image"
           value={formData.image}
           onChange={handleChange}
-          placeholder="Kapak görseli URL'si"
+          placeholder={t("admin.form.image")}
           className="w-full p-3 border rounded"
         />
         <input
           name="category"
           value={formData.category}
           onChange={handleChange}
-          placeholder="Kategori"
+          placeholder={t("admin.form.category")}
           className="w-full p-3 border rounded"
         />
         <input
           name="author"
           value={formData.author}
           onChange={handleChange}
-          placeholder="Yazar"
+          placeholder={t("admin.form.author")}
           className="w-full p-3 border rounded"
         />
 
@@ -203,7 +207,7 @@ function BlogAdminForm() {
             type="submit"
             className="bg-indigo-600 text-white font-bold py-3 px-6 rounded hover:bg-indigo-700"
           >
-            {editMode ? "Güncelle" : "Kaydet"}
+            {editMode ? t("admin.button.update") : t("admin.button.save")}
           </button>
           {editMode && (
             <button
@@ -211,26 +215,26 @@ function BlogAdminForm() {
               onClick={resetForm}
               className="bg-gray-400 text-white font-bold py-3 px-6 rounded hover:bg-gray-500"
             >
-              İptal
+              {t("admin.button.cancel")}
             </button>
           )}
         </div>
 
         {success && (
           <p className="text-green-600 font-semibold">
-            İşlem başarıyla tamamlandı.
+            {t("admin.msg.success")}
           </p>
         )}
       </form>
 
       <hr className="my-8" />
 
-      <h2 className="text-2xl font-bold">Blog Listesi</h2>
+      <h2 className="text-2xl font-bold">{t("admin.list_title")}</h2>
       <button
         onClick={handleLogout}
         className="text-red-600 underline font-semibold"
       >
-        Çıkış Yap
+        {t("admin.button.logout")}
       </button>
       <div className="space-y-3">
         {blogs.map((blog) => (
@@ -247,13 +251,13 @@ function BlogAdminForm() {
                 onClick={() => handleEdit(blog)}
                 className="text-blue-600 hover:underline"
               >
-                Düzenle
+                {t("admin.button.edit")}
               </button>
               <button
                 onClick={() => handleDelete(blog.slug)}
                 className="text-red-600 hover:underline"
               >
-                Sil
+                {t("admin.button.delete")}
               </button>
             </div>
           </div>
