@@ -11,6 +11,8 @@ import PrivacyPolicy from "./components/footer/PrivacyPolicy.jsx";
 import Impressum from "./components/footer/Impressum.jsx";
 import TermsOfService from "./components/footer/TermsOfService.jsx";
 import Admin from "./pages/Admin.jsx";
+import ProtectedRoute from "./components/auth/ProtectedRoute.jsx";
+import Login from "./components/auth/Login.jsx";
 
 function App() {
   return (
@@ -27,7 +29,15 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <Admin />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
       <MigrationFooter />
     </>

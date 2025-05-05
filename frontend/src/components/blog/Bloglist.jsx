@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { X } from "lucide-react"; // Çarpı ikonu için ekledik
+import { X } from "lucide-react";
 import API_BASE from "../../config.js";
 
 function BlogList() {
@@ -143,6 +143,15 @@ function BlogList() {
             </ul>
           </div>
         </aside>
+      </div>
+      {/* Yeni Blog Ekle Butonu (sayfanın altında, login yönlendirmeli) */}
+      <div className="mt-16 text-center">
+        <Link
+          to="/login"
+          className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full text-lg hover:bg-indigo-700 transition"
+        >
+          📝 Yeni Blog Ekle
+        </Link>
       </div>
     </div>
   );

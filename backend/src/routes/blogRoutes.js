@@ -1,5 +1,6 @@
 import express from "express";
 import Blog from "../models/Blog.js";
+import authMiddleware from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -31,7 +32,7 @@ router.get("/:slug", async (req, res) => {
 });
 
 // NEUEN BLOG ERSTELLEN
-router.post("/", async (req, res) => {
+router.post("/", authMiddleware, async (req, res) => {
   try {
     const newBlog = new Blog(req.body);
     const saved = await newBlog.save();
@@ -42,7 +43,7 @@ router.post("/", async (req, res) => {
 });
 
 // BLOG BEITRAG AKTUALISIEREN
-router.put("/:slug", async (req, res) => {
+router.put("/:slug", authMiddleware, async (req, res) => {
   try {
     const updated = await Blog.findOneAndUpdate(
       { slug: req.params.slug },
@@ -58,7 +59,7 @@ router.put("/:slug", async (req, res) => {
 });
 
 // BLOG BEITRAG LÖSCHEN
-router.delete("/:slug", async (req, res) => {
+router.delete("/:slug", authMiddleware, async (req, res) => {
   try {
     const deleted = await Blog.findOneAndDelete({ slug: req.params.slug });
     if (!deleted)

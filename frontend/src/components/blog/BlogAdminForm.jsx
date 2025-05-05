@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import API_BASE from "../../config.js";
+const token = localStorage.getItem("token");
 
 function BlogAdminForm() {
   const [formData, setFormData] = useState({
@@ -59,7 +60,10 @@ function BlogAdminForm() {
 
     const res = await fetch(url, {
       method,
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
       body: JSON.stringify(blog),
     });
 
@@ -90,6 +94,9 @@ function BlogAdminForm() {
     if (window.confirm("Bu blog yazısı silinsin mi?")) {
       const res = await fetch(`${API_BASE}/api/blogs/${slug}`, {
         method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
       if (res.ok) {
         fetchBlogs();
@@ -112,6 +119,11 @@ function BlogAdminForm() {
     });
     setEditMode(false);
     setSuccess(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/login";
   };
 
   return (
@@ -214,6 +226,12 @@ function BlogAdminForm() {
       <hr className="my-8" />
 
       <h2 className="text-2xl font-bold">Blog Listesi</h2>
+      <button
+        onClick={handleLogout}
+        className="text-red-600 underline font-semibold"
+      >
+        Çıkış Yap
+      </button>
       <div className="space-y-3">
         {blogs.map((blog) => (
           <div
