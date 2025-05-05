@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import API_BASE from "../../config.js";
 
 function BlogAdminForm() {
@@ -13,7 +13,19 @@ function BlogAdminForm() {
     author: "",
   });
 
+  const [blogs, setBlogs] = useState([]);
   const [success, setSuccess] = useState(false);
+  const [editMode, setEditMode] = useState(false);
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
+
+  const fetchBlogs = async () => {
+    const res = await fetch(`${API_BASE}/api/blogs`);
+    const data = await res.json();
+    setBlogs(data);
+  };
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -24,6 +36,7 @@ function BlogAdminForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const blog = {
       slug: formData.slug,
       title: {
@@ -39,41 +52,82 @@ function BlogAdminForm() {
       author: formData.author,
     };
 
-    const res = await fetch(`${API_BASE}/api/blogs`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+    const method = editMode ? "PUT" : "POST";
+    const url = editMode
+      ? `${API_BASE}/api/blogs/${formData.slug}`
+      : `${API_BASE}/api/blogs`;
+
+    const res = await fetch(url, {
+      method,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
     });
 
     if (res.ok) {
       setSuccess(true);
-      setFormData({
-        slug: "",
-        title_tr: "",
-        title_de: "",
-        content_tr: "",
-        content_de: "",
-        image: "",
-        category: "",
-        author: "",
-      });
+      fetchBlogs();
+      resetForm();
     } else {
-      alert("Kayıt başarısız");
+      alert("İşlem başarısız.");
     }
   };
 
+  const handleEdit = (blog) => {
+    setEditMode(true);
+    setFormData({
+      slug: blog.slug,
+      title_tr: blog.title.tr,
+      title_de: blog.title.de,
+      content_tr: blog.content.tr,
+      content_de: blog.content.de,
+      image: blog.image,
+      category: blog.category,
+      author: blog.author,
+    });
+  };
+
+  const handleDelete = async (slug) => {
+    if (window.confirm("Bu blog yazısı silinsin mi?")) {
+      const res = await fetch(`${API_BASE}/api/blogs/${slug}`, {
+        method: "DELETE",
+      });
+      if (res.ok) {
+        fetchBlogs();
+      } else {
+        alert("Silme işlemi başarısız.");
+      }
+    }
+  };
+
+  const resetForm = () => {
+    setFormData({
+      slug: "",
+      title_tr: "",
+      title_de: "",
+      content_tr: "",
+      content_de: "",
+      image: "",
+      category: "",
+      author: "",
+    });
+    setEditMode(false);
+    setSuccess(false);
+  };
+
   return (
-    <div className="max-w-3xl mx-auto py-10">
-      <h1 className="text-3xl font-bold mb-6">Yeni Blog Yazısı Ekle</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="max-w-5xl mx-auto py-10 px-4 space-y-10">
+      <h1 className="text-3xl font-bold">
+        {editMode ? "Blog Güncelle" : "Yeni Blog Yazısı Ekle"}
+      </h1>
+
+      <form onSubmit={handleSubmit} className="grid gap-4">
         <input
           name="slug"
           value={formData.slug}
           onChange={handleChange}
           placeholder="slug (örnek: almanyada-denklik)"
           required
+          disabled={editMode}
           className="w-full p-3 border rounded"
         />
         <input
@@ -99,7 +153,7 @@ function BlogAdminForm() {
           placeholder="İçerik (TR)"
           required
           className="w-full p-3 border rounded"
-          rows="6"
+          rows="5"
         />
         <textarea
           name="content_de"
@@ -108,7 +162,7 @@ function BlogAdminForm() {
           placeholder="İçerik (DE)"
           required
           className="w-full p-3 border rounded"
-          rows="6"
+          rows="5"
         />
         <input
           name="image"
@@ -121,26 +175,72 @@ function BlogAdminForm() {
           name="category"
           value={formData.category}
           onChange={handleChange}
-          placeholder="Kategori (örnek: Göçmenlik)"
+          placeholder="Kategori"
           className="w-full p-3 border rounded"
         />
         <input
           name="author"
           value={formData.author}
           onChange={handleChange}
-          placeholder="Yazar adı"
+          placeholder="Yazar"
           className="w-full p-3 border rounded"
         />
-        <button
-          type="submit"
-          className="w-full bg-indigo-600 text-white font-bold py-3 rounded hover:bg-indigo-700"
-        >
-          Kaydet
-        </button>
+
+        <div className="flex gap-4">
+          <button
+            type="submit"
+            className="bg-indigo-600 text-white font-bold py-3 px-6 rounded hover:bg-indigo-700"
+          >
+            {editMode ? "Güncelle" : "Kaydet"}
+          </button>
+          {editMode && (
+            <button
+              type="button"
+              onClick={resetForm}
+              className="bg-gray-400 text-white font-bold py-3 px-6 rounded hover:bg-gray-500"
+            >
+              İptal
+            </button>
+          )}
+        </div>
+
         {success && (
-          <p className="text-green-600">Blog yazısı başarıyla eklendi.</p>
+          <p className="text-green-600 font-semibold">
+            İşlem başarıyla tamamlandı.
+          </p>
         )}
       </form>
+
+      <hr className="my-8" />
+
+      <h2 className="text-2xl font-bold">Blog Listesi</h2>
+      <div className="space-y-3">
+        {blogs.map((blog) => (
+          <div
+            key={blog._id}
+            className="border p-4 rounded flex justify-between items-center"
+          >
+            <div>
+              <p className="font-bold">{blog.title.tr}</p>
+              <p className="text-sm text-gray-500">{blog.slug}</p>
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={() => handleEdit(blog)}
+                className="text-blue-600 hover:underline"
+              >
+                Düzenle
+              </button>
+              <button
+                onClick={() => handleDelete(blog.slug)}
+                className="text-red-600 hover:underline"
+              >
+                Sil
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
