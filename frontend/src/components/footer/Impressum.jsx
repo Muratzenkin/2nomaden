@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Logo from "../../../public/icon/logo.png";
+import logo from "../../assets/icon/logo.png";
 
 function Impressum() {
   const { t } = useTranslation();
@@ -9,7 +9,7 @@ function Impressum() {
       {/* Şirket Logosu */}
       <div className="flex justify-center mb-6">
         <img
-          src={Logo}
+          src={logo}
           alt="2 NOMADEN Logo"
           className="w-20 h-20 rounded-full shadow-lg"
         />
