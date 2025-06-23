@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import Logo from "../../../public/icon/logo.png";
 import { useTranslation } from "react-i18next";
+import logo from "../../assets/icon/logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,7 @@ function Navbar() {
           to="/"
           className={`flex items-center gap-3 text-2xl font-extrabold font-serif ${textColor}`}
         >
-          <img src={Logo} alt="logo" className="w-12 h-12 rounded-full" /> 2
+          <img src={logo} alt="logo" className="w-12 h-12 rounded-full" />2
           NOMADEN
         </NavLink>
 
