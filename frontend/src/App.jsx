@@ -17,7 +17,7 @@ import Login from "./components/auth/Login.jsx";
 function App() {
   return (
     <>
-      {/* TODO burada sikinti var nav basmiyor */}
+      {/* TODO: investigate why Navbar fails to render */}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
