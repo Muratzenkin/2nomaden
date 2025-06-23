@@ -5,7 +5,7 @@ function Contact() {
   return (
     <>
       <Helmet>
-        <title>Iletisim | 2 Nomaden</title>
+        <title>İletişim | 2 Nomaden</title>
       </Helmet>
       <ContactSection />
     </>
