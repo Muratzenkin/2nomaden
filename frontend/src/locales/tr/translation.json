@@ -72,22 +72,32 @@
   },
 
   "product": {
-    "title": "Danışmanlık Hizmetlerimiz",
-    "subtitle": "Saatlik birebir destek alarak Almanya’da hayatınızı kolaylaştırın.",
+    "title": "Danışmanlık Paketlerimiz",
+    "subtitle": "Almanya’daki yaşamınızı kolaylaştırmak için saatlik bireysel danışmanlık desteği alın.",
     "starter": {
       "title": "Başlangıç Paketi",
-      "description": "Almanya’ya yeni gelenler için temel bilgiler, resmi işler, kayıt süreçleri ve temel yönlendirmeler."
+      "description": "Yeni gelenler için temel bilgiler: resmi işlemler, kayıt süreçleri ve daha fazlası."
     },
     "pro": {
-      "title": "Pro Paket",
-      "description": "Denklik, iş bulma, CV düzenleme, iş başvurusu gibi özel danışmanlıklar."
+      "title": "Profesyonel Paket",
+      "description": "Denklik, iş arama, başvuru desteği, CV iyileştirme gibi konularda danışmanlık."
     },
     "custom": {
       "title": "Özel Paket",
-      "description": "İhtiyacınıza özel hazırlanmış destek planı. Talebinize göre şekillenir.",
-      "price": "Fiyat teklifiyle"
+      "description": "İhtiyaçlarınıza özel hazırlanmış danışmanlık planı.",
+      "price": "Fiyat görüşme sonrası belirlenir"
     },
-    "button": "Bize Ulaşın"
+    "benefits": {
+      "zoom": "Zoom üzerinden bire bir danışmanlık",
+      "doc_review": "Belgelerin gözden geçirilmesi",
+      "email_followup": "E-posta ile takip desteği",
+      "translation": "Belge çeviri rehberliği",
+      "flexible": "Esnek içerik ve zamanlama",
+      "strategy": "Kişiye özel stratejik planlama"
+    },
+    "button_details": "Paket detaylarını gör",
+    "button_contact": "Bize ulaşın",
+    "not_found": "Paket bulunamadı."
   },
   "privacy": {
     "title": "Gizlilik Politikası",

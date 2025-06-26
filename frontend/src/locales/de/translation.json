@@ -88,7 +88,17 @@
       "description": "Ein auf Ihre Bedürfnisse zugeschnittener Beratungsplan.",
       "price": "Preis auf Anfrage"
     },
-    "button": "Kontaktieren Sie uns"
+    "benefits": {
+      "zoom": "Einzelberatung per Zoom",
+      "doc_review": "Überprüfung Ihrer Unterlagen",
+      "email_followup": "Nachbetreuung per E-Mail",
+      "translation": "Unterstützung bei Übersetzungen",
+      "flexible": "Flexible Inhalte und Zeitrahmen",
+      "strategy": "Strategische Planung individuell"
+    },
+    "button_details": "Paketdetails anzeigen",
+    "button_contact": "Kontaktieren Sie uns",
+    "not_found": "Paket nicht gefunden."
   },
   "privacy": {
     "title": "Datenschutzrichtlinie",

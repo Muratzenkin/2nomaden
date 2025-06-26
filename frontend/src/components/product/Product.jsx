@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Search } from "lucide-react";
 
 function Product() {
   const { t } = useTranslation();
@@ -58,10 +58,11 @@ function Product() {
                   {option.price}
                 </p>
                 <button
-                  onClick={() => navigate(`/contact?package=${option.id}`)}
+                  onClick={() => navigate(`/products/${option.id}`)}
                   className="inline-flex items-center gap-2 bg-brand-accent hover:bg-indigo-700 text-black px-5 py-3 rounded-lg text-sm font-semibold shadow transition"
                 >
-                  <Mail size={16} /> {t("product.button")}
+                  <Search />
+                  {t("product.button_details")}
                 </button>
               </div>
             ))}

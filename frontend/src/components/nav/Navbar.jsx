@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import Logo from "../../../public/icon/logo.png";
 import { useTranslation } from "react-i18next";
-import logo from "../../assets/icon/logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,16 +30,16 @@ function Navbar() {
   );
 
   const navbarBg = isScrolled
-    ? "bg-white shadow-md dark:bg-brand-background"
-    : "bg-brand-background/80 backdrop-blur-sm";
+    ? "bg-white shadow-lg dark:bg-gray-800"
+    : "bg-gray-100/80 backdrop-blur-sm"; // Daha soft bir arka plan
 
   const textColor = isScrolled
-    ? "text-brand-primary dark:text-white"
-    : "text-brand-text";
+    ? "text-gray-800 dark:text-gray-200"
+    : "text-gray-800"; // Scroll'dan önce yazılar siyah kalıyor
 
   const buttonStyle = isScrolled
-    ? "bg-brand-primary text-brand-text hover:bg-brand-primary/90"
-    : "bg-white/20 text-brand-text hover:bg-white/30 border border-white/30";
+    ? "bg-blue-600 text-white hover:bg-blue-700"
+    : "bg-white text-blue-600 hover:bg-blue-100 border border-blue-300";
 
   return (
     <header
@@ -51,16 +51,16 @@ function Navbar() {
           to="/"
           className={`flex items-center gap-3 text-2xl font-extrabold font-serif ${textColor}`}
         >
-          <img src={logo} alt="logo" className="w-12 h-12 rounded-full" />2
+          <img src={Logo} alt="logo" className="w-12 h-12 rounded-full shadow-md" /> 2
           NOMADEN
         </NavLink>
 
         {/* Masaüstü Menü */}
-        <nav className="hidden md:flex items-center gap-8 font-semibold text-xs tracking-wider uppercase">
+        <nav className="hidden md:flex items-center gap-8 font-semibold text-sm tracking-wide uppercase">
           {navLinks.map((link) => (
             <NavLink key={link.path} to={link.path}>
               <li
-                className={`list-none hover:text-brand-accent transition ${textColor}`}
+                className={`list-none hover:text-yellow-300 transition ${textColor}`}
               >
                 {link.label}
               </li>
@@ -71,16 +71,16 @@ function Navbar() {
         {/* Sağ taraf */}
         <div className="flex items-center gap-3">
           {/* Masaüstü Dil Seçici */}
-          <div className="hidden sm:flex gap-2 text-xs">
+          <div className="hidden sm:flex gap-2 text-sm">
             <button
               onClick={() => i18n.changeLanguage("tr")}
-              className="text-gray-400 hover:text-brand-accent"
+              className="text-gray-400 hover:text-yellow-300"
             >
               🇹🇷
             </button>
             <button
               onClick={() => i18n.changeLanguage("de")}
-              className="text-gray-400 hover:text-brand-accent"
+              className="text-gray-400 hover:text-yellow-300"
             >
               🇩🇪
             </button>
@@ -89,7 +89,7 @@ function Navbar() {
           {/* Contact Butonu */}
           <NavLink to="/contact">
             <button
-              className={`hidden sm:block px-4 py-2 rounded-lg text-xs font-bold shadow-lg uppercase transition-all ${buttonStyle}`}
+              className={`hidden sm:block px-4 py-2 rounded-lg text-sm font-bold shadow-lg uppercase transition-all ${buttonStyle}`}
             >
               {t("navbar.contact")}
             </button>
@@ -110,13 +110,13 @@ function Navbar() {
         <div
           className={`md:hidden transition-all duration-300 ${
             isScrolled
-              ? "bg-white dark:bg-brand-background"
-              : "bg-brand-background/90"
+              ? "bg-white dark:bg-gray-800"
+              : "bg-gray-100/80 backdrop-blur-sm"
           } px-6 pt-4 pb-6`}
         >
           <ul
             className={`flex flex-col gap-4 text-sm font-semibold uppercase ${
-              isScrolled ? "text-brand-primary dark:text-white" : "text-white"
+              isScrolled ? "text-gray-800 dark:text-gray-200" : "text-gray-800"
             }`}
           >
             {navLinks.map((link) => (
@@ -125,14 +125,14 @@ function Navbar() {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
               >
-                <li className="hover:text-brand-accent transition">
+                <li className="hover:text-yellow-300 transition">
                   {link.label}
                 </li>
               </NavLink>
             ))}
 
             <NavLink to="/contact" onClick={() => setIsOpen(false)}>
-              <li className="mt-4 px-4 py-2 text-center rounded-lg bg-brand-primary text-black shadow hover:bg-brand-primary/90">
+              <li className="mt-4 px-4 py-2 text-center rounded-lg bg-blue-600 text-white shadow hover:bg-blue-700">
                 {t("navbar.contact")}
               </li>
             </NavLink>
@@ -144,7 +144,7 @@ function Navbar() {
                   i18n.changeLanguage("tr");
                   setIsOpen(false);
                 }}
-                className="text-xs text-gray-300 hover:text-brand-accent transition"
+                className="text-sm text-gray-300 hover:text-yellow-300 transition"
               >
                 🇹🇷
               </button>
@@ -153,7 +153,7 @@ function Navbar() {
                   i18n.changeLanguage("de");
                   setIsOpen(false);
                 }}
-                className="text-xs text-gray-300 hover:text-brand-accent transition"
+                className="text-sm text-gray-300 hover:text-yellow-300 transition"
               >
                 🇩🇪
               </button>

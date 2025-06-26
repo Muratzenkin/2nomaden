@@ -13,6 +13,7 @@ import TermsOfService from "./components/footer/TermsOfService.jsx";
 import Admin from "./pages/Admin.jsx";
 import ProtectedRoute from "./components/auth/ProtectedRoute.jsx";
 import Login from "./components/auth/Login.jsx";
+import ProductPreview from "./components/product/ProductPreview.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/products" element={<Product />} />
+        <Route path="/products/:id" element={<ProductPreview />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog/*" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
