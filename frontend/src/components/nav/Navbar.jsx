@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import Logo from "../assets/logo.png";
+import Logo from "../../assets/icon/logo.png";
 import { useTranslation } from "react-i18next";
 
 function Navbar() {
@@ -30,11 +30,11 @@ function Navbar() {
   );
 
   const navbarBg = isScrolled
-    ? "bg-white shadow-lg dark:bg-gray-800"
+    ? "bg-white shadow-lg"
     : "bg-gray-100/80 backdrop-blur-sm"; // Daha soft bir arka plan
 
   const textColor = isScrolled
-    ? "text-gray-800 dark:text-gray-200"
+    ? "text-gray-800 "
     : "text-gray-800"; // Scroll'dan önce yazılar siyah kalıyor
 
   const buttonStyle = isScrolled
@@ -60,7 +60,7 @@ function Navbar() {
           {navLinks.map((link) => (
             <NavLink key={link.path} to={link.path}>
               <li
-                className={`list-none hover:text-yellow-300 transition ${textColor}`}
+                className={`list-none hover:text-indigo-300 transition ${textColor}`}
               >
                 {link.label}
               </li>
@@ -74,13 +74,13 @@ function Navbar() {
           <div className="hidden sm:flex gap-2 text-sm">
             <button
               onClick={() => i18n.changeLanguage("tr")}
-              className="text-gray-400 hover:text-yellow-300"
+              className="text-gray-400 hover:text-indigo-300 cursor-pointer"
             >
               🇹🇷
             </button>
             <button
               onClick={() => i18n.changeLanguage("de")}
-              className="text-gray-400 hover:text-yellow-300"
+              className="text-gray-400 hover:text-indigo-300 cursor-pointer"
             >
               🇩🇪
             </button>
@@ -125,7 +125,7 @@ function Navbar() {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
               >
-                <li className="hover:text-yellow-300 transition">
+                <li className="hover:text-indigo-300 transition">
                   {link.label}
                 </li>
               </NavLink>
@@ -144,7 +144,7 @@ function Navbar() {
                   i18n.changeLanguage("tr");
                   setIsOpen(false);
                 }}
-                className="text-sm text-gray-300 hover:text-yellow-300 transition"
+                className="text-sm text-gray-300 hover:text-indigo-300 transition"
               >
                 🇹🇷
               </button>
@@ -153,7 +153,7 @@ function Navbar() {
                   i18n.changeLanguage("de");
                   setIsOpen(false);
                 }}
-                className="text-sm text-gray-300 hover:text-yellow-300 transition"
+                className="text-sm text-gray-300 hover:text-indigo-300 transition"
               >
                 🇩🇪
               </button>
