@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import Logo from "../icon/logo.png";
+import Logo from "/icon/logo.png";
 import { useTranslation } from "react-i18next";
 
 function Navbar() {
